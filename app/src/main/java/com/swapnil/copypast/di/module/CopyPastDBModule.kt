@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.swapnil.copypast.di.customAnnotation.ApplicationSingleton
 import com.swapnil.copypast.repository.CopyPastDB
-import com.swapnil.copypast.repository.roomDB.dao.ClipBoardItemDao
+import com.swapnil.copypast.repository.dao.ClipBoardItemDao
 import dagger.Module
 import dagger.Provides
 

@@ -1,4 +1,4 @@
-package com.swapnil.copypast.repository.roomDB.dao
+package com.swapnil.copypast.repository.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
