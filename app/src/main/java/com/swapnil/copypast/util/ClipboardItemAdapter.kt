@@ -19,7 +19,7 @@ class ClipboardItemAdapter: ListAdapter<ClipBoardItem, ClipboardItemAdapter.Comp
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder.bindClipItem(getItem(position))
+        holder.bindClipItem(getItem(position), position)
     }
 
     companion object {
@@ -32,8 +32,8 @@ class ClipboardItemAdapter: ListAdapter<ClipBoardItem, ClipboardItemAdapter.Comp
                 tvClipboardText = itemView.findViewById(R.id.tv_copied_txt)
             }
 
-            fun bindClipItem(clipBoardItem: ClipBoardItem) {
-                tvClipboardText.text = itemView.context.getString(R.string.formatted_clipboard_item_txt, clipBoardItem.id, clipBoardItem.text)
+            fun bindClipItem(clipBoardItem: ClipBoardItem, position: Int) {
+                tvClipboardText.text = itemView.context.getString(R.string.formatted_clipboard_item_txt, (position + 1), clipBoardItem.text)
             }
         }
     }
