@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.swapnil.copypast.CopyPastApplication
 import com.swapnil.copypast.R
 import com.swapnil.copypast.repository.CopyPastDB
 import com.swapnil.copypast.repository.CopyPastRepository
 import com.swapnil.copypast.repository.dao.ClipBoardItemDao
+import com.swapnil.copypast.util.ClipboardItemAdapter
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -23,11 +26,14 @@ class MainActivity : AppCompatActivity() {
     lateinit var tvCpStartMainText: TextView
     lateinit var tvCpStartSubText: TextView
 
-    lateinit var tvCpCounterMainText: TextView
-    lateinit var tvCpCounterSubText: TextView
+    private lateinit var tvCpCounterMainText: TextView
+    private lateinit var tvCpCounterSubText: TextView
 
-    lateinit var tvCpPermissionMainText: TextView
-    lateinit var tvCpPermissionSubText: TextView
+    private lateinit var tvCpPermissionMainText: TextView
+    private lateinit var tvCpPermissionSubText: TextView
+
+    private lateinit var rvClipBoardItems: RecyclerView
+    private lateinit var clipBoardItemAdapter: ClipboardItemAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         (application as CopyPastApplication).applicationComponent.inject(this)
         initViews()
         setViewText()
+        setClipBoardItemRecyclerView()
     }
 
     private fun initViews() {
@@ -50,6 +57,8 @@ class MainActivity : AppCompatActivity() {
         val includedPermissionCp = findViewById<LinearLayout>(R.id.included_permission_cp)
         tvCpPermissionMainText = includedPermissionCp.findViewById(R.id.tv_main_text)
         tvCpPermissionSubText = includedPermissionCp.findViewById(R.id.tv_sub_text)
+
+        rvClipBoardItems = findViewById(R.id.rv_copied_txt_items)
     }
 
     private fun setViewText() {
@@ -61,6 +70,12 @@ class MainActivity : AppCompatActivity() {
 
         tvCpPermissionMainText.text = getString(R.string.permission_copypast)
         tvCpPermissionSubText.text = getString(R.string.permission_copypast_sub_off)
+    }
+
+    private fun setClipBoardItemRecyclerView() {
+        clipBoardItemAdapter = ClipboardItemAdapter()
+        rvClipBoardItems.layoutManager = LinearLayoutManager(this)
+        rvClipBoardItems.adapter = clipBoardItemAdapter
     }
 }
 
