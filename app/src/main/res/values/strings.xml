@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">CopyPast</string>
+
+    <string name="start_copypast">Start CopyPast</string>
+    <string name="start_copypast_sub">Switch on the toggle to start the app</string>
+
+    <string name="counter_copypast">Past Text Count</string>
+    <string name="counter_copypast_sub">Input the number of past copied text</string>
+
+    <string name="permission_copypast">Permission</string>
+    <string name="permission_copypast_sub_off">Please turn on the toggle for granting the permission to access the copy ball over any apps</string>
+    <string name="permission_copypast_sub_on">Turning off the toggle will disable copy ball over other apps </string>
 </resources>
