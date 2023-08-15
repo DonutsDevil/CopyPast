@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_clip_board_holder"
+    android:layout_width="match_parent"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_selector_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/unselected_indicator" />
+
+    <TextView
+        android:id="@+id/tv_copied_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/iv_selector_indicator"
+        android:fontFamily="@font/roboto_regular"
+        android:padding="8dp"
+        android:text="@string/sample_clip_text"
+        android:textSize="14sp" />
+</RelativeLayout>
