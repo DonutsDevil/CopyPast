@@ -1,12 +1,13 @@
-package com.swapnil.copypast.repository.utils
+package com.swapnil.copypast.repository.serviceImplmentations
 
 import android.util.Log
 import com.swapnil.copypast.model.ClipBoardItem
-import com.swapnil.copypast.repository.ClipBoardLocalService
+import com.swapnil.copypast.repository.serviceInterface.ClipBoardLocalService
 import com.swapnil.copypast.repository.dao.ClipBoardItemDao
 import javax.inject.Inject
 
-class ClipBoardLocalServiceImpl @Inject constructor(private val dao: ClipBoardItemDao): ClipBoardLocalService {
+class ClipBoardLocalServiceImpl @Inject constructor(private val dao: ClipBoardItemDao):
+    ClipBoardLocalService {
     private val TAG = "ClipBoardLocalServiceImpl"
     /**
      * Add clipBoardItem to db if user set value to get previous copied text is less then items saved in our local db

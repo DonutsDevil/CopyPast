@@ -2,6 +2,7 @@ package com.swapnil.copypast.repository
 
 import android.util.Log
 import com.swapnil.copypast.model.ClipBoardItem
+import com.swapnil.copypast.repository.serviceInterface.ClipBoardLocalService
 import javax.inject.Inject
 
 class CopyPastRepository @Inject constructor(private val clipBoardLocalService: ClipBoardLocalService) {

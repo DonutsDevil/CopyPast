@@ -1,4 +1,4 @@
-package com.swapnil.copypast.repository
+package com.swapnil.copypast.repository.serviceInterface
 
 import com.swapnil.copypast.model.ClipBoardItem
 

@@ -9,7 +9,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class CopyPastDBModule {
+class ClipBoardLocalServiceModule {
 
     @ApplicationSingleton
     @Provides

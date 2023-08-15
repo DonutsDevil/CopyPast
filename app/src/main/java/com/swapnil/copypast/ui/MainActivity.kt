@@ -11,7 +11,6 @@ import com.swapnil.copypast.model.ClipBoardItem
 import com.swapnil.copypast.repository.CopyPastDB
 import com.swapnil.copypast.repository.CopyPastRepository
 import com.swapnil.copypast.repository.dao.ClipBoardItemDao
-import com.swapnil.copypast.repository.utils.ClipBoardLocalServiceImpl
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,9 +23,6 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var clipBoardItemDao: ClipBoardItemDao
-
-    @Inject
-    lateinit var clipBoardLocalServiceImpl: ClipBoardLocalServiceImpl
 
     @Inject
     lateinit var copyPastRepository: CopyPastRepository
