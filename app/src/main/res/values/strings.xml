@@ -11,4 +11,5 @@
     <string name="permission_copypast_sub_off">Please turn on the toggle for granting the permission to access the copy ball over any apps</string>
     <string name="permission_copypast_sub_on">Turning off the toggle will disable copy ball over other apps </string>
     <string name="sample_clip_text">1. Know the percentage of unit test cover ...</string>
+    <string name="last_copied">Last copied</string>
 </resources>

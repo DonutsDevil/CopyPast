@@ -109,7 +109,7 @@
                     android:layout_toStartOf="@id/iv_drop_down"
                     android:layout_toEndOf="@id/iv_clock"
                     android:fontFamily="@font/nunito_sans"
-                    android:text="Last copied"
+                    android:text="@string/last_copied"
                     android:textSize="16sp" />
 
                 <ImageView
